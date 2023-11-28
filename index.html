@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             @font-face {
                 font-family: 'Sunday Morning';
@@ -133,6 +134,20 @@
             @keyframes tickerMove {
                 0% { transform: translateX(0%); }
                 100% { transform: translateX(-100%); /* Moves to the left */ }
+            }
+            @media only screen and (max-width: 480px) {
+                .container {
+                    gap: 190px;
+                }
+                .bigTitle {
+                    font-size: 100px;
+                    font-family: 'Sunday Morning';
+                }
+                .smallTitle {
+                    font-size: 44px;
+                    font-family: 'Sunday Morning';
+                    margin-top: -15px;
+                }
             }
         </style>     
     </head>
