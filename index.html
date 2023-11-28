@@ -96,12 +96,96 @@
                 font-size: 30px;
                 margin-bottom: 20px;
             }
-        </style>
-        <script>
-            // window.location = "https://lu.ma/lccrz1gc";
-        </script>
+            .ticker {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                gap: 17px;
+                background-color: black;
+                z-index: 1000;
+            }
+            .tickerContent {
+                display: inline-flex; /* Changed to inline-flex for aligning text and icon */
+                animation: tickerMove 120s linear infinite;
+            }
+            .tickerIcon {
+                width: 28.53px;
+                height: 28.53px;
+                padding-right: 17px;
+            }
+            .tickerText {
+                font-size: 22px;
+                font-family: 'MPLUS1p';
+                color: white;
+                padding-right: 17px;
+                white-space: nowrap;
+            }
+            /* Keyframes for the moving text */
+            @keyframes tickerMove {
+                0% { transform: translateX(0%); }
+                100% { transform: translateX(-100%); /* Moves to the left */ }
+            }
+        </style>     
     </head>
     <body>
+        <div class="ticker">
+            <div class="tickerContent">
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Jake is building Hngr, an app for food lovers to review restaurants.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Josh is building Beacon, the fastest way to meet up with friends.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Aidan is working on handwriting recognition for ai edtech.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Sam is building Spotlight, a TikTok consultancy.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Mason is building Modamoya, a multi-brand online fashion retailer.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Jacqueline is making her first zine.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Joshua is working on Unistart, a key resource for collegiate entrepreneurs.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Mandika is building Arcus, a medical assistant that allows physicians to quickly extract info from patient files.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Jaden is working on ModelRegen, an online 3D mockup generator.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Jonathan is building Schej, it's like When2Meet meets Google Calendar.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Priyansh is building a driver safety application that monitors driver fatigue.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Lindsey is making a podcast that interviews strangers.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Josephine is creating 3D assets for a new game.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Sarah is building a protocol exploit game.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">George is creating a new beef snack.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Andrew is building Patreon for fitness influencers.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Gurreet is setting up an influencer farmers market.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Abby is working on Keepsake, information storage for seniors.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Josheta is building an app for tracking professional achievements.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Meiqi is working on The Good Green Gift, a self-watering pot.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Kevin is building Bliss, an AI notes-taking app.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Cameron is building Deep Refactor, an AI-driven static code analysis tool.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Jade is designing websites.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+                <div class="tickerText">Altamush is building Mixer, a platform to connect collegiate talent to startups.</div>
+                <img src="assets/Star.png" class="tickerIcon"/>
+            </div>
+        </div>
         <div class="container">
             <div class="title">
                 <div class="bigTitle">SUNDAYS</div>
@@ -134,5 +218,29 @@
             <div class="footer">SUNDAYS</div>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var tickerContent = document.querySelector('.tickerContent');
+                var textElements = Array.from(tickerContent.querySelectorAll('.tickerText'));
+                var icons = tickerContent.querySelectorAll('.tickerIcon');
+        
+                // Shuffle the text elements
+                for (var i = textElements.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    [textElements[i], textElements[j]] = [textElements[j], textElements[i]];
+                }
+        
+                // Clear the ticker content
+                tickerContent.innerHTML = '';
+        
+                // Re-insert the shuffled text elements with icons
+                textElements.forEach(function(text, index) {
+                    tickerContent.appendChild(text);
+                    if (index < icons.length) {
+                        tickerContent.appendChild(icons[index].cloneNode(true));
+                    }
+                });
+            });
+        </script>          
     </body>
 </html>
