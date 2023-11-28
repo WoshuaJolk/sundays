@@ -1,8 +1,138 @@
 <html>
     <head>
+        <style>
+            @font-face {
+                font-family: 'Sunday Morning';
+                src: url('fonts/Sunday Morning.otf') format('openType'),
+            }
+            @font-face {
+                font-family: 'MPLUS1p';
+                src: url('fonts/MPLUS1p-Regular.ttf') format('truetype'),
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 100px;
+            }
+            .title  {
+                padding-top: 140px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            .bigTitle {
+                font-size: 200px;
+                font-family: 'Sunday Morning';
+            }
+            .smallTitle {
+                font-size: 64px;
+                font-family: 'Sunday Morning';
+                margin-top: -25px;
+            }
+            .button {
+                display: flex;
+                flex-direction: row;
+                gap: 14px;
+                width: 355px;
+                height: 65px;
+                background-color: #FF6B00;
+                border-radius: 10px;
+                align-items: center;
+                justify-content: center;
+                transition: scale 0.5s;
+                text-decoration: none;
+            }
+            .button:hover {
+                scale: 1.05;
+            }
+            .button:active {
+                scale: 0.95;
+            }
+            .buttonText {
+                font-size: 22px;
+                font-family: 'MPLUS1p';
+                color: white;
+            }
+            .buttonIcon {
+                height: 24px;
+                width: 24px;
+            }
+            .downIcon {
+                height: 24px;
+                width: 24px;
+            }
+            .seeMore {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 18px;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                gap: 600px;
+                padding-bottom: 300px;
+                width: 380px;
+                justify-content: center;
+                align-items: center;
+            }
+            .mainText {
+                font-size: 22px;
+                font-family: 'MPLUS1p';
+                text-align: center;
+            }
+            .end {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+            }
+            .footer {
+                font-family: 'Sunday Morning';
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+        </style>
         <script>
-            window.location = "https://lu.ma/lccrz1gc";
+            // window.location = "https://lu.ma/lccrz1gc";
         </script>
     </head>
-    <body></body>
+    <body>
+        <div class="container">
+            <div class="title">
+                <div class="bigTitle">SUNDAYS</div>
+                <div class="smallTitle">AT USC</div>
+            </div>
+            <a href="https://lu.ma/lccrz1gc" class="button">
+                <div class="buttonText">come to our next sesh!</div>
+                <img src="assets/ArrowRightOutline.png" class="buttonIcon"/>
+            </a>
+            <div class="main">
+                <div class="seeMore">
+                    <div class="mainText">At last, a home to work on the passions that excite you.</div>
+                    <img src="assets/ArrowDownOutline.png" class="downIcon"/>
+                </div>
+                <div class="mainText">Sundays at USC is like getting feral at some game day tailgate except we're not at a tailgate and we're actually just sitting at a table on our laptops near campus.</div>
+                <div class="mainText">We’re hosting live co-working session hosted every Sunday to bring together passionate creatives and builders to do whatever they're doing that isn't school.</div>
+                <div class="mainText">It's time carved out for deep work, giving you space to finally work on the project you've always been itching to start.</div>
+                <div class="mainText">We're a safe space to demo, eat food, receive feedback, find inspiration, make new friends, and explore your intellectual curiosities!</div>
+                <!-- <div class="mainText">​​​​​​​​So who's it for?​</div> -->
+                <div class="mainText">​​​​​​This is for the makers, artists, filmmakers, learners, researchers, founders, movers, and shakers.</div>
+                <div class="mainText">If you are writing a world-shattering screenplay, laboring on your next piece of art, building the next moonshot company, or shipping that side-project, come!</div>
+                <div class="end">
+                    <div class="mainText">fight on fam ✌️</div>
+                    <a href="https://lu.ma/lccrz1gc" class="button">
+                        <div class="buttonText">come to our next sesh!</div>
+                        <img src="assets/ArrowRightOutline.png" class="buttonIcon"/>
+                    </a>
+                </div>
+            </div>
+            <div class="footer">SUNDAYS</div>
+            </div>
+        </div>
+    </body>
 </html>
